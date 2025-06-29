@@ -1,5 +1,4 @@
-// === File: README.md ===
-# Credit Simulator
+# BCA CreditSim
 
 ## How to Build
 ```bash
