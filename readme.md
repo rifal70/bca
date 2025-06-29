@@ -11,14 +11,23 @@ mvn clean package
 java -jar -jar target/bca-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 # With file input
-java -jar -jar target/bca-1.0-SNAPSHOT-jar-with-dependencies.jar input.txt
+java -jar -jar target/bca-1.0-SNAPSHOT-jar-with-dependencies.jar file_inputs.txt
 ```
 
 ## Docker
+
+### Without File
 ```bash
 docker build -t bca .
 docker run --rm -it bca
 ```
+
+### With File
+```bash
+docker run --rm -v "${PWD}:/inputs" rifal70/bca /inputs/file_inputs.txt
+```
+
+docker run --rm -v "${PWD}:/inputs" rifal70/bca /inputs/file_inputs.txt
 
 ## Notes
 - Java SE only
